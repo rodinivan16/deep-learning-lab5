@@ -56,12 +56,12 @@ TRAIN_ROOT = BASE_DIR / "train" / "train"
 TEST_ROOT = BASE_DIR / "test_kaggle" / "test_kaggle"
 INPUT_SUBMISSION_PATH = BASE_DIR / "submission.csv"
 
-# ----- GOOGLE ДИСК -----
+
 drive.mount('/content/drive')
 SAVE_DIR = Path('/content/drive/MyDrive/laba5')
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 
-# Изменил названия файлов, чтобы отследить эксперимент с GeM
+
 OUTPUT_SUBMISSION_PATH = SAVE_DIR / "submission_convnext_gem.csv"
 WEIGHTS_PATH = SAVE_DIR / "model_convnext_gem.pth"
 
@@ -120,7 +120,7 @@ test_transform = T.Compose([
 ])
 
 # ============================================================
-# MODEL DEFINITION (С ДОБАВЛЕНИЕМ GeM POOLING)
+# MODEL DEFINITION 
 # ============================================================
 
 class GeM(nn.Module):
